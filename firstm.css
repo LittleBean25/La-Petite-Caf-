@@ -1,0 +1,40 @@
+:root {
+    --sage: #a3a380ff;
+    --vanilla: #d6ce93ff;
+    --beige: #efebceff;
+    --buff: #d8a48fff;
+    --old-rose: #bb8588ff;
+}
+
+body {
+    background-color: var(--beige);
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-bar {
+    background-color: var(--sage);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--vanilla);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-frame {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--buff);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+}

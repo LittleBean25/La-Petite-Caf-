@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Best Seller</title>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        :root {
+            --sage: #a3a380;
+            --vanilla: #d6ce93;
+            --beige: #efebce;
+            --buff: #d8a48f;
+            --old-rose: #bb8588;
+        }
+
+        body {
+            background-color: var(--beige);
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            background-color: var(--sage);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-bar a:hover {
+            color: #ddd;
+        }
+
+        .swiper-container {
+            width: 80%;
+            margin: 6rem auto 2rem;
+        }
+
+        .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 500px; /* Set a fixed height */
+    object-fit:fill; /* Ensures images cover the area without distortion */
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.05);
+}
+        /* Navigation Arrows */
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--old-rose);
+        }
+
+        .circle-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 90%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--buff);
+        }
+
+        .circle-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 50%;
+        }
+
+        .info-section {
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            width: 80%;
+            margin: auto;
+        }
+
+        .bg-vanilla { background-color: var(--vanilla); }
+        .bg-buff { background-color: var(--buff); }
+        .bg-old-rose { background-color: var(--old-rose); }
+
+        @media (max-width: 768px) {
+            .circle-frame {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#products">Products</a>
+        <a href="#cart">My Cart</a>
+    </nav>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="coffeemenu.html"><img src="coffee.jpeg" alt="Coffee"></a></div>
+            <div class="swiper-slide"><a href="Pastriesmenu.html"><img src="p.jpeg" alt="pastriee"></a></div>
+            <div class="swiper-slide"><a href="sandwhichesmenu.html"><img src="s.jpeg" alt="sand"></a></div>
+            <div class="swiper-slide"><a href="Beveragemenu.html"><img src="b.jpeg" alt="bew"></a></div>
+            <div class="swiper-slide"><a href="TeaMenu.html"><img src="t.jpeg" alt="teass"></a></div>
+            <div class="swiper-slide"><a href="saladmenu.html"><img src="ss.jpeg" alt="saladss"></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <h2 class="text-center" style="text-align:center; font-size:2rem; margin:1rem 0;">Our Best Seller</h2>
+
+    <div class="flex" style="display: flex; justify-content: center; gap: 1.5rem;">
+        <div class="circle-frame"><img src="coffee.jpeg" alt="Best Seller"></div>
+        <div class="circle-frame"><img src="coffee.jpeg" alt="Best Seller"></div>
+        <div class="circle-frame"><img src="coffee.jpeg" alt="Best Seller"></div>
+    </div>
+
+    <div>
+        <div id="about" class="info-section bg-vanilla">
+            <h3>About Us</h3>
+            <p> Welcome to our café! We pride ourselves on serving the finest coffee and pastries in town...</p>
+        </div>
+        <div id="contact" class="info-section bg-buff">
+            <h3>Contact Us</h3>
+            <p>Got a question or want to leave feedback? Email us at miraculousbeans@gmail.com...</p>
+        </div>
+        <div id="products" class="info-section bg-old-rose">
+            <h3>More Products</h3>
+            <p>Explore our wide range of gourmet coffees, teas, and pastries...</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: { el: '.swiper-pagination', clickable: true },
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                },
+                effect: 'fade',
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+
+            document.querySelectorAll(".nav-bar a").forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    let targetId = this.getAttribute("href").substring(1);
+                    let targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 60,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

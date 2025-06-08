@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Best Seller</title>
+    <link rel="stylesheet" href="firstm.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Additional styling for circular frames */
+        .circle-frame {
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Styling for Info Sections */
+        .bg-vanilla {
+            background-color: #f3e0b4;
+        }
+
+        .bg-buff {
+            background-color: #e2c290;
+        }
+
+        .bg-old-rose {
+            background-color: #c18a99;
+        }
+
+        /* Additional styling for the text under sections */
+        .section-text {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        /* Responsive styling for mobile */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .swiper-container {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .circle-frame {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar p-4 text-white flex justify-around text-lg font-bold bg-gray-800">
+        <a href="#about" class="hover:text-gray-300">About Us</a>
+        <a href="#contact" class="hover:text-gray-300">Contact Us</a>
+        <a href="#products" class="hover:text-gray-300">Products</a>
+        <a href="#cart" class="hover:text-gray-300">My Cart</a>
+    </nav>
+
+    <!-- Slider Section -->
+    <div class="swiper-container my-6 w-4/5 mx-auto">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="coffee.jpeg"></div>
+            <div class="swiper-slide"><img src="coffee.jpeg"></div>
+            <div class="swiper-slide"><img src="coffee.jpeg"></div>
+            <div class="swiper-slide"><img src="coffee.jpeg"></div>
+            <div class="swiper-slide"><img src="coffee.jpeg"></div>
+            <div class="swiper-slide"><img src="coffee.jpeg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-center text-3xl text-gray-800 font-bold my-6">Our Best Seller</h2>
+
+    <!-- Circular Frames -->
+    <div class="flex justify-center gap-6 my-6">
+        <div class="circle-frame"><img src="coffee.jpeg"></div>
+        <div class="circle-frame"><img src="coffee.jpeg"></div>
+        <div class="circle-frame"><img src="coffee.jpeg"></div>
+    </div>
+
+    <!-- Info Sections -->
+    <div class="grid grid-cols-3 gap-6 p-6">
+        <div id="about" class="bg-vanilla p-4 text-center text-xl font-semibold">
+            About Us
+            <p class="section-text">
+                Welcome to our café! We pride ourselves on serving the finest coffee and pastries in town. Our friendly
+                staff is dedicated to providing a warm and welcoming atmosphere for all our customers. Whether you're
+                stopping by for a quick cup of coffee or enjoying a leisurely afternoon, we aim to make your visit
+                memorable.
+            </p>
+        </div>
+
+        <div id="contact" class="bg-buff p-4 text-center text-xl font-semibold">
+            Contact Us
+            <p class="section-text">
+                Got a question or want to leave feedback? We're always happy to hear from you! You can reach us via
+                email at info@ourcafe.com or give us a call at (555) 123-4567. You can also visit us at our cozy
+                location downtown. We look forward to hearing from you soon!
+            </p>
+        </div>
+
+        <div id="products" class="bg-old-rose p-4 text-center text-xl font-semibold">
+            More Products
+            <p class="section-text">
+                Explore our wide range of gourmet coffees, teas, and pastries. We offer everything from classic
+                espresso drinks to seasonal specials and freshly baked cakes. Our menu is constantly evolving with new
+                products, so there's always something new to try. Come visit us and discover your new favorite treat!
+            </p>
+        </div>
+    </div>
+
+    <script src="firsts.js"></script>
+</body>
+
+</html>
